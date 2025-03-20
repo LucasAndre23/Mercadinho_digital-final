@@ -1,0 +1,18 @@
+<div class="container">
+  <h1>Cadastro de Produtos</h1>
+  <form #productForm="ngForm" (ngSubmit)="addProduct()" class="mb-4">
+    <mat-form-field class="full-width">
+      <mat-label>Nome</mat-label>
+      <input matInput [(ngModel)]="products.nome" name="name" required />
+    </mat-form-field>
+    <mat-form-field class="full-width">
+      <mat-label>Descrição</mat-label>
+      <input matInput [(ngModel)]="products.descricao" name="description" required />
+    </mat-form-field>
+    <mat-form-field class="full-width">
+      <mat-label>Preço</mat-label>
+      <input matInput type="number" [(ngModel)]="products.preco" name="price" required />
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit" [disabled]="productForm.invalid">Adicionar Produto</button>
+  </form>
+</div>

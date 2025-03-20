@@ -1,0 +1,90 @@
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  padding: 16px;
+  background-color: #f9f9f9;
+}
+
+.product-card {
+  width: 300px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+mat-card-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+mat-card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+mat-card-subtitle {
+  font-size: 14px;
+  color: #757575;
+}
+
+mat-card-content {
+  font-size: 16px;
+  color: #424242;
+  margin-top: 8px;
+}
+
+mat-card-content input {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+mat-card-actions {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 8px;
+  border-top: 1px solid #ddd;
+}
+
+mat-card-actions button {
+  font-size: 14px;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+mat-card-actions button:hover {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+mat-card-actions .mat-button {
+  font-weight: bold;
+}
+
+button[color="warn"] {
+  color: #d32f2f;
+}
+
+button[color="warn"]:hover {
+  background-color: rgba(211, 47, 47, 0.1);
+}
+
+button[color="primary"] {
+  color: #1976d2;
+}
+
+button[color="primary"]:hover {
+  background-color: rgba(25, 118, 210, 0.1);
+}

@@ -1,0 +1,32 @@
+<div class="background-image">
+  <div class="overlay">
+
+  </div>
+</div>
+
+<div class="container mt-4">
+  <header class="text-center mb-4">
+    <h1>Os mais vendidos</h1>
+  </header>
+
+  <div class="card-container">
+    <mat-card *ngFor="let product of products">
+      <img mat-card-image [src]="product.imageUrl" [alt]="product.name">
+      <mat-card-title class="product-name">{{ product.name }}</mat-card-title>
+      <mat-card-content>
+        <p>{{ product.description }}</p>
+        <p class="price">R$ {{ product.price.toFixed(2) }}</p> <!-- Exibe o preço formatado -->
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-icon-button color="primary" (click)="adicionarAoCarrinho(product)" aria-label="Adicionar ao Carrinho">
+          <mat-icon>shopping_cart</mat-icon>
+        </button>
+
+
+
+
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>
+

@@ -1,0 +1,24 @@
+<div class="carrinho-container">
+  <h1>Seu Carrinho</h1>
+
+  <div *ngIf="itens.length; else vazio">
+    <div *ngFor="let item of itens" class="produto-card">
+      <img [src]="item.imageUrl" [alt]="item.name" class="produto-imagem">
+      <div class="produto-info">
+        <h3>{{ item.name }}</h3>
+        <p>{{ item.description }}</p>
+        <strong>R$ {{ item.price.toFixed(2) }}</strong>
+      </div>
+    </div>
+
+    <div class="total-container">
+      <h2>Total: R$ {{ total.toFixed(2) }}</h2> <!-- Exibe o total -->
+    </div>
+
+    <button mat-raised-button color="warn" (click)="limparCarrinho()">Limpar Carrinho</button>
+  </div>
+
+  <ng-template #vazio>
+    <p>Seu carrinho está vazio.</p>
+  </ng-template>
+</div>

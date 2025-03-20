@@ -1,0 +1,45 @@
+<header>
+  <mat-toolbar>
+    <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="irParaHome()">
+        <mat-icon>home</mat-icon>
+        <span>Home</span>
+      </button>
+      <button mat-menu-item [routerLink]="['/cadastro-produto']">
+        <mat-icon>person_add</mat-icon>
+        <span>Cadastrar</span>
+      </button>
+      <button mat-menu-item [routerLink]="['/listagem-produto']">
+        <mat-icon>list</mat-icon>
+        <span>Listar</span>
+      </button>
+      <button mat-menu-item [routerLink]="['/produtos']">
+        <mat-icon>category</mat-icon>
+        <span>Produtos Avançados</span>
+      </button>
+    </mat-menu>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Buscar</mat-label>
+      <input matInput placeholder="Busque aqui seu produto" [(ngModel)]="nomeProduto" class="input-search">
+      <button mat-icon-button matSuffix (click)="buscarProduto()">
+        <mat-icon>search</mat-icon>
+      </button>
+    </mat-form-field>
+
+
+
+
+
+    <div class="btn-container">
+      <button mat-icon-button [routerLink]="['/carrinho']">
+        <mat-icon>shopping_bag</mat-icon>
+      </button>
+
+      <button mat-icon-button [routerLink]="['/login']">
+        <mat-icon>login</mat-icon>
+      </button>
+    </div>
+  </mat-toolbar>
+</header>

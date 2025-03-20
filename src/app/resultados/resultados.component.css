@@ -1,0 +1,38 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Layout dos cards */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+.produto-card {
+  width: 250px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+mat-card-title.product-name {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.price {
+  font-weight: bold;
+  color: #388e3c;
+  margin-top: 10px;
+}
+
+.mat-card-actions {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+}

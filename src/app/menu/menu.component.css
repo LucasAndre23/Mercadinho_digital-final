@@ -1,0 +1,67 @@
+header {
+  background-color:#24ed85; 
+  color: white;
+   padding: 50px;
+}
+
+mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #24ed85; 
+  color: white;
+}
+
+mat-menu {
+  background-color: #ffffff;
+}
+
+.mat-menu-item {
+  color: #24ed85; 
+}
+
+.mat-menu-item:hover {
+  background-color: #e0e0e0;
+}
+
+.example-full-width {
+  flex-grow: 1;
+  margin: 0 20px;
+}
+
+.btn-container {
+  display: flex;
+  align-items: center;
+}
+
+.mat-icon-button {
+  margin-left: 10px;
+  color: white;
+}
+
+.mat-form-field {
+  width: 100%;
+}
+
+.mat-form-field-underline {
+  background-color: #ffffff;
+}
+
+.mat-form-field-label {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.mat-form-field input {
+  color: white;
+}
+
+.mat-form-field mat-icon {
+  color: white;
+}
+
+.mat-form-field .mat-form-field-suffix .mat-icon-button {
+  color: white;
+}
+
+
+

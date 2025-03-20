@@ -1,0 +1,48 @@
+<div class="product-list">
+  <mat-card *ngFor="let product of products" class="product-card">
+    <mat-card-header>
+      <mat-card-title>
+        <ng-container *ngIf="produtoEmEdicao && produtoEmEdicao.id === product.id; else viewMode">
+          <input [(ngModel)]="produtoEmEdicao.nome" placeholder="Nome do Produto" />
+        </ng-container>
+        <ng-template #viewMode>
+          {{ product.nome }}
+        </ng-template>
+      </mat-card-title>
+      <mat-card-subtitle>
+        <ng-container *ngIf="produtoEmEdicao && produtoEmEdicao.id === product.id; else descViewMode">
+          <input [(ngModel)]="produtoEmEdicao.descricao" placeholder="Descrição do Produto" />
+        </ng-container>
+        <ng-template #descViewMode>
+          {{ product.descricao }}
+        </ng-template>
+      </mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content>
+      <p>
+        <ng-container *ngIf="produtoEmEdicao && produtoEmEdicao.id === product.id; else precoViewMode">
+          <input type="number" [(ngModel)]="produtoEmEdicao.preco" placeholder="Preço" />
+        </ng-container>
+        <ng-template #precoViewMode>
+          <strong>Preço:</strong> R$ {{ product.preco.toFixed(2) }}
+        </ng-template>
+      </p>
+    </mat-card-content>
+
+    <mat-card-actions>
+      <ng-container *ngIf="produtoEmEdicao && produtoEmEdicao.id === product.id; else actionButtons">
+        <button mat-button color="primary" (click)="salvarEdicao()">Salvar</button>
+        <button mat-button color="warn" (click)="cancelarEdicao()">Cancelar</button>
+      </ng-container>
+      <ng-template #actionButtons>
+        <button mat-icon-button color="primary" (click)="editarProduto(product)">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-icon-button color="warn" (click)="removeProduct(product)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </ng-template>
+    </mat-card-actions>
+  </mat-card>
+</div>
